@@ -14,7 +14,11 @@ public class EmployeeJdbc {
       Statement stm;
       ResultSet rlt;
       try{
+          
+          //Loading and Registering Driver
           Class.forName("org.apache.derby.jdbc.ClientDriver");
+          
+          //Connection is get Established 
           con = DriverManager.getConnection("jdbc:derby://localhost:1527/Empployee","em","em");
           
           stm = con.createStatement();
